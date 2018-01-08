@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+struct Sobaka
+{
+public:
+    bool pol;
+    short vozr,massa;
+    std::string poroda;
+};
+
+int main()
+ {
+     int N;
+     std::cout << "Skolko u vas sobak?" << std::endl;
+     std::cin >>N;
+     Sobaka* S = new Sobaka[N];
+     for (int i=0;i<N;i++)
+     {
+         std::cout << "Pol, vozrast, massa, poroda vashei sobaki" << std::endl;
+         std::cin >> S[i].pol >> S[i].vozr >> S[i].massa;
+         std::cin.get();
+         getline(std::cin, S[i].poroda);
+     }
+     for (int i = 0; i<N; i++)
+     {
+         std::cout << "Sobaka nomer " << i+1 << std::endl;
+         if (S[i].pol = 1)
+         {
+             std::cout << "Devochka" << std::endl;
+         } else
+             std::cout << "Malchik" << std::endl;
+         std::cout << "Let " << S[i].vozr << std::endl;
+         std::cout << "Vesit " << S[i].massa << std::endl;
+         std::cout << "Poroda " << S[i].poroda << std::endl;
+         std::cout << std::endl;
+     }
+     return 0;
+}
